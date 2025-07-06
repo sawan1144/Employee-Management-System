@@ -1,10 +1,12 @@
-import Login from './components/Auth/Login'
+import EmployeeDashboard from './components/dashboard/EmployeeDashboard'
+// import Login from './components/Auth/Login'
 
 
 const App = () => {
   return (
     <>
-      <Login />
+      {/* <Login /> */}
+      <EmployeeDashboard />
     </>
   )
 }

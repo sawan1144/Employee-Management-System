@@ -32,7 +32,7 @@ const Login = () => {
             required
             className='py-3 px-4 rounded-lg outline-none w-80 text-sm placeholder:text-gray-400 bg-black' type="Password"
             placeholder='Enter password' />
-          <button className='mt-3 bg-blue-500 flex justify-center w-80 py-2 rounded-lg'>Log In</button>
+          <button className='mt-3 bg-blue-500 flex justify-center w-80 py-2 rounded-lg font-medium'>Log In</button>
         </form>
       </div>
     </div>
