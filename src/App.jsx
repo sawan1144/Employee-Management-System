@@ -1,4 +1,5 @@
-import EmployeeDashboard from './components/dashboard/EmployeeDashboard'
+import AdminDashboard from './components/dashboard/AdminDashboard'
+// import EmployeeDashboard from './components/dashboard/EmployeeDashboard'
 // import Login from './components/Auth/Login'
 
 
@@ -6,7 +7,8 @@ const App = () => {
   return (
     <>
       {/* <Login /> */}
-      <EmployeeDashboard />
+      {/* <EmployeeDashboard /> */}
+      <AdminDashboard />
     </>
   )
 }
