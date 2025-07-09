@@ -1,56 +1,27 @@
 import React from 'react'
+import NewTask from './NewTask'
+import AcceptTask from './AcceptTask'
+import CompleteTask from './CompleteTask'
+import FailedTask from './FailedTask'
 
-const Tasklist = () => {
+
+const Tasklist = ({data}) => {
     return (
         <div id='tasklist' className='flex gap-8 h-[42%] overflow-x-auto flex-nowrap mt-5'>
-            <div className='w-[23%] h-full rounded-2xl shrink-0 bg-[#343443] p-6'>
-                <div className='flex justify-between'>
-                    <h3 className='bg-[#d13c3c] px-3 rounded-lg font-medium'>High</h3>
-                    <h3 className='font-medium'>20 Feb 2024</h3>
-                </div>
-                <h1 className='text-3xl font-semibold mt-8'>Yo le Task no.1</h1>
-                <p className='mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quasi! Accusamus quisquam dolorem maxime quas?</p>
-            </div>
-            <div className='w-[23%] h-full rounded-2xl shrink-0 bg-[#343443] p-6'>
-                <div className='flex justify-between'>
-                    <h3 className='bg-[#d13c3c] px-3 rounded-lg font-medium'>High</h3>
-                    <h3 className='font-medium'>20 Feb 2024</h3>
-                </div>
-                <h1 className='text-3xl font-semibold mt-8'>Yo le Task no.1</h1>
-                <p className='mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quasi! Accusamus quisquam dolorem maxime quas?</p>
-            </div>
-            <div className='w-[23%] h-full rounded-2xl shrink-0 bg-[#343443] p-6'>
-                <div className='flex justify-between'>
-                    <h3 className='bg-[#d13c3c] px-3 rounded-lg font-medium'>High</h3>
-                    <h3 className='font-medium'>20 Feb 2024</h3>
-                </div>
-                <h1 className='text-3xl font-semibold mt-8'>Yo le Task no.1</h1>
-                <p className='mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quasi! Accusamus quisquam dolorem maxime quas?</p>
-            </div>
-            <div className='w-[23%] h-full rounded-2xl shrink-0 bg-[#343443] p-6'>
-                <div className='flex justify-between'>
-                    <h3 className='bg-[#d13c3c] px-3 rounded-lg font-medium'>High</h3>
-                    <h3 className='font-medium'>20 Feb 2024</h3>
-                </div>
-                <h1 className='text-3xl font-semibold mt-8'>Yo le Task no.1</h1>
-                <p className='mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quasi! Accusamus quisquam dolorem maxime quas?</p>
-            </div>
-            <div className='w-[23%] h-full rounded-2xl shrink-0 bg-[#343443] p-6'>
-                <div className='flex justify-between'>
-                    <h3 className='bg-[#d13c3c] px-3 rounded-lg font-medium'>High</h3>
-                    <h3 className='font-medium'>20 Feb 2024</h3>
-                </div>
-                <h1 className='text-3xl font-semibold mt-8'>Yo le Task no.1</h1>
-                <p className='mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quasi! Accusamus quisquam dolorem maxime quas?</p>
-            </div>
-            <div className='w-[23%] h-full rounded-2xl shrink-0 bg-[#343443] p-6'>
-                <div className='flex justify-between'>
-                    <h3 className='bg-[#d13c3c] px-3 rounded-lg font-medium'>High</h3>
-                    <h3 className='font-medium'>20 Feb 2024</h3>
-                </div>
-                <h1 className='text-3xl font-semibold mt-8'>Yo le Task no.1</h1>
-                <p className='mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quasi! Accusamus quisquam dolorem maxime quas?</p>
-            </div>
+            {data.tasks.map((elem)=>{
+                if(elem.active){
+                  return  <AcceptTask />
+                }
+                if(elem.new_task){
+                  return  <NewTask />
+                }
+                if(elem.failed){
+                  return  <FailedTask />
+                }
+                if(elem.CompleteTask){
+                  return  <CompleteTask />
+                }
+            })}
         </div>
     )
 }

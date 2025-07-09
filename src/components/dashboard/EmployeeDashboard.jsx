@@ -6,10 +6,9 @@ import Tasklist from "../tasklist/Tasklist"
 const EmployeeDashboard = ({data}) => {
   return (
     <div className="bg-[#1A1A1D] h-screen px-10 overflow-x-hidden">
-        <h1>{data.id}</h1>
-        <Header />
-        <Taskboxes />
-        <Tasklist />
+        <Header data={data} />
+        <Taskboxes data={data} />
+        <Tasklist data={data} />
     </div>
   )
 }

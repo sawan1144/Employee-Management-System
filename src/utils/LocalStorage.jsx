@@ -2,9 +2,9 @@ const employees = [
   {
     id: 1,
     firstName: "Aarav",
-    email: "employee1@example.com",
+    email: "1@e.c",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 1 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -43,7 +43,7 @@ const employees = [
     firstName: "Ananya",
     email: "employee2@example.com",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 1 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -82,7 +82,7 @@ const employees = [
     firstName: "Rohan",
     email: "employee3@example.com",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 0 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 0 },
     tasks: [
       {
         active: true,
@@ -111,7 +111,7 @@ const employees = [
     firstName: "Ishita",
     email: "employee4@example.com",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 1 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -150,7 +150,7 @@ const employees = [
     firstName: "Vivaan",
     email: "employee5@example.com",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 0 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 0 },
     tasks: [
       {
         active: true,
@@ -179,7 +179,7 @@ const employees = [
     firstName: "Meera",
     email: "employee6@example.com",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 0 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 0 },
     tasks: [
       {
         active: true,
@@ -208,7 +208,7 @@ const employees = [
     firstName: "Aditya",
     email: "employee7@example.com",
     password: "123",
-    taskCount: { active: 1, completed: 1, failed: 1 },
+    taskCount: {new: 2, active: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
