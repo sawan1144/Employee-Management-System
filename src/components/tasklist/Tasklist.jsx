@@ -5,21 +5,21 @@ import CompleteTask from './CompleteTask'
 import FailedTask from './FailedTask'
 
 
-const Tasklist = ({data}) => {
+const Tasklist = ({data, idx}) => {
     return (
         <div id='tasklist' className='flex gap-8 h-[42%] overflow-x-auto flex-nowrap mt-5'>
             {data.tasks.map((elem)=>{
                 if(elem.active){
-                  return  <AcceptTask />
+                  return  <AcceptTask key={idx} />
                 }
                 if(elem.new_task){
-                  return  <NewTask />
+                  return  <NewTask key={idx} />
                 }
                 if(elem.failed){
-                  return  <FailedTask />
+                  return  <FailedTask key={idx} />
                 }
                 if(elem.CompleteTask){
-                  return  <CompleteTask />
+                  return  <CompleteTask key={idx} />
                 }
             })}
         </div>
