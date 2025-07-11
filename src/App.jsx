@@ -15,10 +15,9 @@ const App = () =>
     
     if (loggedInUser) {
       const userData = JSON.parse(loggedInUser)
-      setUser(loggedInUser.role)
-      setLoggedInUserData(loggedInUser.data)
+      setUser({role: userData.role})
+      setLoggedInUserData(userData.data)
     }
-
   },[])
   
   
