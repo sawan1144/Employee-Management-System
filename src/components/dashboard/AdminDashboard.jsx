@@ -4,7 +4,7 @@ import Taskform from '../other/Taskform'
 
 const AdminDashboard = () => {
     return (
-        <div className='px-10 h-screen w-full bg-[#1A1A1D]'>
+        <div className='px-10 h-full w-full bg-[#1A1A1D] pb-5'>
             <Header />
             <Taskform />
             <Alltasks />

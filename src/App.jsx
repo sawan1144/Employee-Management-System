@@ -21,21 +21,24 @@ const App = () =>
   },[])
   
   
-
+  
   const handlelogin = (email, password)=>{
-      if(authdata){
-        const employe =  authdata.employees.find((e)=>email == e.email && password == e.password)
-        if (employe) {
-          setUser({role: 'employee'})
-          setLoggedInUserData(employe)
-          localStorage.setItem('loggedInUser', JSON.stringify({role:'employee', data:employe}))
-        }
-      }else if(authdata && authdata.admin.find((e)=>email == e.email && password == e.password)){
+    if(authdata){
+      const employe =  authdata.employees.find((e)=>email == e.email && password == e.password)
+      const adminn = authdata.admin.find((e)=>email == e.email && password == e.password)
+      if (employe) {
+        setUser({role: 'employee'})
+        setLoggedInUserData(employe)
+        localStorage.setItem('loggedInUser', JSON.stringify({role:'employee', data:employe}))
+      } else if (adminn) {
         setUser({role: 'admin'})
-        localStorage.setItem('loggedInUser', JSON.stringify({role:'admin', data:admin}))
+        setLoggedInUserData(adminn)
+        localStorage.setItem('loggedInUser', JSON.stringify({role:'admin', data:adminn}))
+      } else {
+        alert('invalid credentials')
       }
-      else{alert('invalid credentials')}
     }
+}
 
 
   return (
