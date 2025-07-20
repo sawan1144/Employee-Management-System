@@ -4,8 +4,6 @@ import { Authcontext } from '../../context/Contextprovider'
 const Alltasks = () => {
 
     const authData = useContext(Authcontext)
-    console.log(authData.employees)
-
 
     return (
         <div id='alltask' className='bg-[#595973] py-4 pt-6 px-3 rounded mt-5'>
@@ -18,9 +16,9 @@ const Alltasks = () => {
                 <h5 className='w-1/5'>Failed Task</h5>
             </div>
 
-            {authData.employees.map((elem) => {
+            {authData.employees.map((elem, idx) => {
 
-                return <div className='bg-[#343443] mb-2 py-2 px-4 flex justify-between rounded'>
+                return <div key={idx} className='bg-[#343443] mb-2 py-2 px-4 flex justify-between rounded'>
                     <h2 className='w-1/5 text-lg'>{elem.firstName}</h2>
                     <h3 className='w-1/5 text-lg font-medium text-blue-400'>{elem.taskCount.new}</h3>
                     <h5 className='w-1/5 text-lg font-medium'>{elem.taskCount.active}</h5>
